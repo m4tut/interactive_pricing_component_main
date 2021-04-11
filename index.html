@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Interactive pricing component</title>
-  <link rel='stylesheet' href='style/style.css' />
-  <script src='js/script.js' defer></script>
-</head>
-<body>
-    <div class="content">
-        
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+        <title>Interactive pricing component</title>
+        <link rel="stylesheet" href="style/style.css" />
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <div class="content">
+            <header class="header">
+                <h1 class="text_title">Simple, traffic-based pricing</h1>
+                <p class="text_text">Sign-up for our 30-day trial. No credit card required.</p>
+            </header>
+            <main class="main_calculator">
+                <!-- Main price and  pageviews section-->
+                <div class="calculator_price">
+                    <p class="pageviews"><span class="pageviews_quantity">100k</span> Pageviews</p>
+                    <p class="price">$<span class="price_quantity">16.00</span>/month</p>
+                </div>
 
-  <!-- Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+                <!-- Slider section -->
+                <div class="range">
+                    <input class="slider" type="range" min="0" max="4" value="2" />
+                </div>
 
-  Pageviews
-  $ /month
+                <!-- Toggle and Billing section -->
+                <div class="toggle">
+                    <p class="toggle_text">Monthly Billing</p>
+                    <label class="switch">
+                        <input id="checked" type="checkbox" /><span class="change round"></span>
+                    </label>
+                    <p class="togle_text">Yearly Billing <span class="discount">25% discount</span></p>
+                </div>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+                <!-- Separator line-->
+                <hr class="line" />
 
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial -->
-</body>
+                <!-- Start trial section -->
+                <div class="trial">
+                    <ul class="perks">
+                        <li class="perks_item">Unlimited websites</li>
+                        <li class="perks_item">100% data ownership</li>
+                        <li class="perks_item">Email reports</li>
+                    </ul>
+                    <button class="start_btn">Start my trial</button>
+                </div>
+            </main>
+        </div>
+    </body>
 </html>
