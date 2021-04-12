@@ -74,7 +74,7 @@ body {
 
 /* main */
 .main_calculator {
-    height: 400px;
+    min-height: 400px;
     width: 540px;
     background-color: var(--veryPaleBlue);
     border-radius: 10px;
@@ -143,7 +143,7 @@ body {
 }
 
 .toggle {
-    width: 440px;
+    width: 100%;
     margin: 40px auto;
     display: flex;
     justify-content: flex-end;
@@ -156,9 +156,10 @@ body {
     margin-left: 20px;
 }
 
-.discount {
+.discount::after {
+    content: '-25% discount';
     margin-left: 10px;
-    padding: 1px 7px;
+    padding: 2px 7px;
     color: var(--lightRed);
     border-radius: 10px;
     background-color: var(--lightGrayishRed);
@@ -202,15 +203,15 @@ body {
 
 .line {
     border: none;
-    color: var(--lightGrayishBlue); 
+    color: var(--lightGrayishBlue);
     background-color: var(--lightGrayishBlue);
-    height: 1px; 
+    height: 1px;
 }
 
 .trial {
     width: 440px;
     margin: 35px auto;
-
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -221,7 +222,6 @@ body {
     color: var(--grayishBlue);
     font-size: 0.9rem;
     margin-left: 10px;
-    
 }
 
 .perks_item {
@@ -231,6 +231,7 @@ body {
 
 .start_btn {
     outline: none;
+    border: none;
     height: 40px;
     width: 170px;
     background-color: var(--darkDesaturatedBlue);
@@ -246,3 +247,83 @@ body {
     color: var(--veryPaleBlue);
 }
 
+/* media */
+@media (max-width: 585px) {
+    html,
+    body {
+        height: auto;
+    }
+
+    /* header */
+    .header {
+        margin-top: 100px;
+        width: 310px;
+    }
+
+    .text_title {
+        font-size: 1.2rem;
+    }
+
+    .text_text {
+        margin: 0 auto;
+        width: 60%;
+        line-height: 24px;
+        font-size: 0.8rem;
+    }
+
+    /* main */
+    .main_calculator {
+        width: 310px;
+        position: relative;
+    }
+
+    .calculator_price {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pageviews {
+        font-size: 0.9rem;
+        margin-bottom: 100px;
+    }
+
+    .range {
+        width: 260px;
+
+        position: absolute;
+        top: 55px;
+        right: 25px;
+    }
+
+    .toggle_text {
+        font-size: 0.8rem;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .discount::after {
+        content: '-25%';
+    }
+
+    .trial {
+        display: block;
+        width: 100%;
+    }
+
+    .perks {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .perks_item {
+        list-style-position: inside;
+    }
+
+    .start_btn {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
